@@ -1,16 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Windows;
+﻿using Caliburn.PresentationFramework.ApplicationModel;
+using Caliburn.StructureMap;
+using Fooder.ViewModels;
+using Microsoft.Practices.ServiceLocation;
+using StructureMap;
+using StructureMap.Configuration.DSL;
+
 
 namespace Fooder
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    public partial class App
     {
+        protected override IServiceLocator CreateContainer()
+        {
+            Registry registry = GetRegistry();
+
+            IContainer container = new Container(registry);
+
+            return new StructureMapAdapter(container);
+        }
+
+        private Registry GetRegistry()
+        {
+            var registry = new Registry();
+
+            registry.ForRequestedType<IShellViewModel>()
+                .AsSingletons()
+                .TheDefaultIsConcreteType<ShellViewModel>();
+
+            registry.ForConcreteType<ProductViewModel>();
+
+            return registry;
+        }
+
+        protected override object CreateRootModel()
+        {
+            var binder = (DefaultBinder) Container.GetInstance<IBinder>();
+            
+            binder.EnableMessageConventions();
+            binder.EnableBindingConventions();
+
+            return Container.GetInstance<ProductViewModel>();
+        }
     }
 }
