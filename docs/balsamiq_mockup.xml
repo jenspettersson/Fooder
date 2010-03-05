@@ -1,0 +1,90 @@
+<mockup version="1.0" skin="sketch" measuredW="662" measuredH="587" mockupW="467" mockupH="519">
+  <controls>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::SearchBox" x="480" y="109" w="157" h="-1" measuredW="95" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TitleWindow" x="185" y="58" w="467" h="519" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fooder</text>
+        <topheight>26</topheight>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::ButtonBar" x="212" y="107" w="-1" h="-1" measuredW="253" measuredH="31" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20Recipes%2C%20Shopping%20List</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="__group__" x="212" y="153" w="425" h="388" measuredW="354" measuredH="388" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="15" controlTypeID="com.balsamiq.mockups::FieldSet" x="0" y="0" w="425" h="388" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="30">
+          <controlProperties>
+            <text>Latest%20recipes</text>
+          </controlProperties>
+        </control>
+        <control controlID="16" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="396" y="14" w="-1" h="366" measuredW="16" measuredH="100" zOrder="1" locked="false" isInGroup="30">
+          <controlProperties>
+            <value>0</value>
+          </controlProperties>
+        </control>
+        <control controlID="23" controlTypeID="__group__" x="25" y="27" w="353" h="84" measuredW="294" measuredH="84" zOrder="2" locked="false" isInGroup="30">
+          <groupChildrenDescriptors>
+            <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="0" y="5" w="92" h="79" measuredW="77" measuredH="79" zOrder="0" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Food</text>
+              </controlProperties>
+            </control>
+            <control controlID="22" controlTypeID="com.balsamiq.mockups::TextArea" x="113" y="0" w="240" h="84" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Recipe%20Name%0AA%20second%20line%20of%20text</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="24" controlTypeID="__group__" x="25" y="114" w="353" h="84" measuredW="294" measuredH="84" zOrder="3" locked="false" isInGroup="30">
+          <groupChildrenDescriptors>
+            <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="0" y="5" w="92" h="79" measuredW="77" measuredH="79" zOrder="0" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Food</text>
+              </controlProperties>
+            </control>
+            <control controlID="22" controlTypeID="com.balsamiq.mockups::TextArea" x="113" y="0" w="240" h="84" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Recipe%20Name%0AA%20second%20line%20of%20text</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="25" controlTypeID="__group__" x="25" y="205" w="353" h="84" measuredW="294" measuredH="84" zOrder="4" locked="false" isInGroup="30">
+          <groupChildrenDescriptors>
+            <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="0" y="5" w="92" h="79" measuredW="77" measuredH="79" zOrder="0" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Food</text>
+              </controlProperties>
+            </control>
+            <control controlID="22" controlTypeID="com.balsamiq.mockups::TextArea" x="113" y="0" w="240" h="84" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Recipe%20Name%0AA%20second%20line%20of%20text</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="26" controlTypeID="__group__" x="25" y="296" w="353" h="84" measuredW="294" measuredH="84" zOrder="5" locked="false" isInGroup="30">
+          <groupChildrenDescriptors>
+            <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="0" y="5" w="92" h="79" measuredW="77" measuredH="79" zOrder="0" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Food</text>
+              </controlProperties>
+            </control>
+            <control controlID="22" controlTypeID="com.balsamiq.mockups::TextArea" x="113" y="0" w="240" h="84" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="23">
+              <controlProperties>
+                <text>Recipe%20Name%0AA%20second%20line%20of%20text</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
