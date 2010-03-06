@@ -27,19 +27,19 @@ namespace Fooder
                 .AsSingletons()
                 .TheDefaultIsConcreteType<ShellViewModel>();
 
-            registry.ForConcreteType<ProductViewModel>();
+            registry.ForConcreteType<ApplicationModel>();
 
             return registry;
         }
 
         protected override object CreateRootModel()
         {
-            var binder = (DefaultBinder) Container.GetInstance<IBinder>();
+            //var binder = (DefaultBinder) Container.GetInstance<IBinder>();
             
-            binder.EnableMessageConventions();
-            binder.EnableBindingConventions();
+            //binder.EnableMessageConventions();
+            //binder.EnableBindingConventions();
 
-            return Container.GetInstance<ProductViewModel>();
+            return Container.GetInstance<ApplicationModel>();
         }
     }
 }

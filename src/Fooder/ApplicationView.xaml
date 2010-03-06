@@ -1,0 +1,17 @@
+﻿<Window x:Class="Fooder.ApplicationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pf="clr-namespace:Caliburn.PresentationFramework;assembly=Caliburn.PresentationFramework"
+        xmlns:Views="clr-namespace:Fooder.Views"
+        Title="Fooder"
+        Height="550"
+        Width="650"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="10 10">
+        <DockPanel x:Name="Header"
+                   DockPanel.Dock="Top"
+                   Margin="10">
+            <TextBlock Text="This is the Header Dock Panel" />
+        </DockPanel>
+    </DockPanel>
+</Window>
