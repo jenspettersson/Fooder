@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Fooder.Views
+namespace Fooder.Client.Views
 {
     /// <summary>
-    /// Interaction logic for ProductView.xaml
+    /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class ProductView : UserControl
+    public partial class ShellView : UserControl
     {
-        public ProductView()
+        public ShellView()
         {
             InitializeComponent();
         }

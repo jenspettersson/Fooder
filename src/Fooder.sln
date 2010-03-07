@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fooder", "Fooder\Fooder.csproj", "{B65AD34F-A78C-4848-8498-AF1A0BA2E325}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fooder.Client", "Fooder.Client\Fooder.Client.csproj", "{B65AD34F-A78C-4848-8498-AF1A0BA2E325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
