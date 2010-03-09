@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Fooder
+namespace Fooder.Client.Views
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class HomeView : UserControl
     {
-        public Window1()
+        public HomeView()
         {
             InitializeComponent();
         }

@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Fooder.Client.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="{Binding DisplayName}"
+                   FontSize="25" />
+        <TextBox></TextBox>
+    </StackPanel>
+</UserControl>

@@ -1,6 +1,7 @@
 ﻿using Caliburn.PresentationFramework.ApplicationModel;
 using Caliburn.StructureMap;
 using Fooder.Client.ViewModels;
+using Fooder.Client.ViewModels.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 using StructureMap;
 using StructureMap.Configuration.DSL;
@@ -25,7 +26,22 @@ namespace Fooder.Client
             registry.ForRequestedType<IShellViewModel>()
                 .AsSingletons()
                 .TheDefaultIsConcreteType<ShellViewModel>();
-            
+
+            registry.ForRequestedType<IMenuViewModel>()
+                .TheDefaultIsConcreteType<MenuViewModel>();
+
+            registry.ForRequestedType<IHomeViewModel>()
+                .AsSingletons()
+                .TheDefaultIsConcreteType<HomeViewModel>();
+
+            registry.ForRequestedType<IRecipeViewModel>()
+                .AsSingletons()
+                .TheDefaultIsConcreteType<RecipeViewModel>();
+
+            registry.ForRequestedType<IShoppingListViewModel>()
+                .AsSingletons()
+                .TheDefaultIsConcreteType<ShoppingListViewModel>();
+
             return registry;
         }
 

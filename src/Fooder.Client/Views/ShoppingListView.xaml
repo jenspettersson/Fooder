@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="Fooder.Client.Views.ShoppingListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock Text="{Binding DisplayName}"
+                   FontSize="25" />
+    </Grid>
+</UserControl>
