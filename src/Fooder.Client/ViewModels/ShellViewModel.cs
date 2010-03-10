@@ -1,5 +1,7 @@
 using System;
+using Caliburn.PresentationFramework;
 using Caliburn.PresentationFramework.ApplicationModel;
+using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 

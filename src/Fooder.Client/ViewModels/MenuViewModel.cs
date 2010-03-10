@@ -1,30 +1,23 @@
+using System.Linq;
+using Caliburn.PresentationFramework;
 using Caliburn.PresentationFramework.ApplicationModel;
+using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels.Interfaces;
 
 namespace Fooder.Client.ViewModels
 {
     public class MenuViewModel : Presenter, IMenuViewModel
     {
-        private readonly IShellViewModel _shellViewModel;
+        private IObservableCollection<IMenuItem> _menuItems;
 
-        public MenuViewModel(IShellViewModel shellViewModel)
+        public IObservableCollection<IMenuItem> MenuItems
         {
-            _shellViewModel = shellViewModel;
+            get { return _menuItems; }
         }
 
-        public void GoToHome()
+        public MenuViewModel(IMenuItem[] menuItems)
         {
-            _shellViewModel.Open<IHomeViewModel>();
-        }
-
-        public void GoToRecipes()
-        {
-            _shellViewModel.Open<IRecipeViewModel>();
-        }
-
-        public void GoToShoppingList()
-        {
-            _shellViewModel.Open<IShoppingListViewModel>();
+            _menuItems = new BindableCollection<IMenuItem>(menuItems);
         }
     }
 }

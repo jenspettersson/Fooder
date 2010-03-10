@@ -1,9 +1,11 @@
 ﻿using Caliburn.PresentationFramework.ApplicationModel;
 using Caliburn.StructureMap;
+using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels;
 using Fooder.Client.ViewModels.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 using StructureMap;
+using StructureMap.Attributes;
 using StructureMap.Configuration.DSL;
 
 namespace Fooder.Client
@@ -41,6 +43,17 @@ namespace Fooder.Client
             registry.ForRequestedType<IShoppingListViewModel>()
                 .AsSingletons()
                 .TheDefaultIsConcreteType<ShoppingListViewModel>();
+
+            registry.Scan(x =>
+                              {
+                                  x.TheCallingAssembly();
+                                  x.AddAllTypesOf<IMenuItem>();
+                              });
+
+            //registry.ForRequestedType<IMenuItem>()
+            //    .TheDefaultIsConcreteType<FooMenuItem>();
+
+
 
             return registry;
         }

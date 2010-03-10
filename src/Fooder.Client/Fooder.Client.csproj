@@ -85,6 +85,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Features\Bar\ViewModels\BarViewModel.cs" />
+    <Compile Include="Features\Bar\ViewModels\IBarViewModel.cs" />
+    <Compile Include="Features\Bar\Views\BarView.xaml.cs">
+      <DependentUpon>BarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultConventionScannerWithScope.cs" />
+    <Compile Include="Features\Bar\BarMenuItem.cs" />
+    <Compile Include="Features\Foo\ViewModels\FooViewModel.cs" />
+    <Compile Include="Features\Foo\FooMenuItem.cs" />
+    <Compile Include="Features\Foo\ViewModels\IFooViewModel.cs" />
+    <Compile Include="Features\Foo\Views\FooView.xaml.cs">
+      <DependentUpon>FooView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\IMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,6 +119,9 @@
     <Compile Include="ViewModels\Interfaces\IShellViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IShoppingListViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\HomeMenuItem.cs" />
+    <Compile Include="ViewModels\Navigation\RecipeMenuItem.cs" />
+    <Compile Include="ViewModels\Navigation\ShoppingListMenuItem.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\ShoppingListViewModel.cs" />
@@ -135,6 +152,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Features\Bar\Views\BarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Features\Foo\Views\FooView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
