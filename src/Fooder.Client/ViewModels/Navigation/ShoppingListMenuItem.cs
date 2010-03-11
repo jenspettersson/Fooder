@@ -1,7 +1,5 @@
-using System;
 using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels.Interfaces;
-using Microsoft.Practices.ServiceLocation;
 
 namespace Fooder.Client.ViewModels.Navigation
 {
@@ -12,9 +10,16 @@ namespace Fooder.Client.ViewModels.Navigation
             get { return "Shopping list"; }
         }
 
+        private readonly IShellViewModel _shellViewModel;
+
+        public ShoppingListMenuItem(IShellViewModel shellViewModel)
+        {
+            _shellViewModel = shellViewModel;
+        }
+
         public void Open()
         {
-            ServiceLocator.Current.GetInstance<IShellViewModel>().Open<IShoppingListViewModel>();
+            _shellViewModel.Open<IShoppingListViewModel>();
         }
     }
 }

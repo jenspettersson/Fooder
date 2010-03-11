@@ -13,9 +13,16 @@ namespace Fooder.Client.Features.Bar
             get { return "Bar"; }
         }
 
+        private readonly IShellViewModel _shellViewModel;
+
+        public BarMenuItem(IShellViewModel shellViewModel)
+        {
+            _shellViewModel = shellViewModel;
+        }
+
         public void Open()
         {
-            ServiceLocator.Current.GetInstance<IShellViewModel>().Open<BarViewModel>();
+            _shellViewModel.Open<BarViewModel>();
         }
     }
 }

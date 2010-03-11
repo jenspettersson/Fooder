@@ -12,9 +12,16 @@ namespace Fooder.Client.Features.Foo
             get { return "Foo"; }
         }
 
+        private readonly IShellViewModel _shellViewModel;
+
+        public FooMenuItem(IShellViewModel shellViewModel)
+        {
+            _shellViewModel = shellViewModel;
+        }
+
         public void Open()
         {
-            ServiceLocator.Current.GetInstance<IShellViewModel>().Open<FooViewModel>();
+            _shellViewModel.Open<FooViewModel>();
         }
     }
 }

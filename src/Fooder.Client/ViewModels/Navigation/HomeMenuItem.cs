@@ -1,6 +1,5 @@
 using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels.Interfaces;
-using Microsoft.Practices.ServiceLocation;
 
 namespace Fooder.Client.ViewModels.Navigation
 {
@@ -11,9 +10,16 @@ namespace Fooder.Client.ViewModels.Navigation
             get { return "Home"; }
         }
 
+        private readonly IShellViewModel _shellViewModel;
+
+        public HomeMenuItem(IShellViewModel shellViewModel)
+        {
+            _shellViewModel = shellViewModel;
+        }
+
         public void Open()
         {
-            ServiceLocator.Current.GetInstance<IShellViewModel>().Open<IHomeViewModel>();
+            _shellViewModel.Open<IHomeViewModel>();
         }
     }
 }
