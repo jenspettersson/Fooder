@@ -17,7 +17,7 @@ namespace Fooder.Client.ViewModels
 
         public MenuViewModel(IMenuItem[] menuItems)
         {
-            _menuItems = new BindableCollection<IMenuItem>(menuItems);
+            _menuItems = new BindableCollection<IMenuItem>(menuItems.Where(x => x.Activated == true));
         }
     }
 }

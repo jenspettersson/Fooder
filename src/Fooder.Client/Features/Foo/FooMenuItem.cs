@@ -1,3 +1,4 @@
+using System;
 using Fooder.Client.Features.Foo.ViewModels;
 using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels.Interfaces;
@@ -10,6 +11,11 @@ namespace Fooder.Client.Features.Foo
         public string ItemName
         {
             get { return "Foo"; }
+        }
+
+        public bool Activated
+        {
+            get { return false; }
         }
 
         private readonly IShellViewModel _shellViewModel;

@@ -13,6 +13,11 @@ namespace Fooder.Client.Features.Bar
             get { return "Bar"; }
         }
 
+        public bool Activated
+        {
+            get { return false; }
+        }
+
         private readonly IShellViewModel _shellViewModel;
 
         public BarMenuItem(IShellViewModel shellViewModel)

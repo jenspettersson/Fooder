@@ -1,4 +1,5 @@
-﻿using Caliburn.PresentationFramework.ApplicationModel;
+﻿using System;
+using Caliburn.PresentationFramework.ApplicationModel;
 using Caliburn.StructureMap;
 using Fooder.Client.Infrastructure;
 using Fooder.Client.ViewModels;
@@ -14,48 +15,16 @@ namespace Fooder.Client
     {
         protected override IServiceLocator CreateContainer()
         {
-            Registry registry = GetRegistry();
+            Registry registry = new UserInterfaceRegistry();
 
             IContainer container = new Container(registry);
 
+            var commandLine = Environment.CommandLine.Split(' ');
+
+            if (commandLine.Length > 1)
+                container.SetDefaultsToProfile(commandLine[1]);
+
             return new StructureMapAdapter(container);
-        }
-
-        private Registry GetRegistry()
-        {
-            var registry = new Registry();
-
-            registry.ForRequestedType<IShellViewModel>()
-                .AsSingletons()
-                .TheDefaultIsConcreteType<ShellViewModel>();
-
-            registry.ForRequestedType<IMenuViewModel>()
-                .TheDefaultIsConcreteType<MenuViewModel>();
-
-            registry.ForRequestedType<IHomeViewModel>()
-                .AsSingletons()
-                .TheDefaultIsConcreteType<HomeViewModel>();
-
-            registry.ForRequestedType<IRecipeViewModel>()
-                .AsSingletons()
-                .TheDefaultIsConcreteType<RecipeViewModel>();
-
-            registry.ForRequestedType<IShoppingListViewModel>()
-                .AsSingletons()
-                .TheDefaultIsConcreteType<ShoppingListViewModel>();
-
-            registry.Scan(x =>
-                              {
-                                  x.TheCallingAssembly();
-                                  x.AddAllTypesOf<IMenuItem>();
-                              });
-
-            //registry.ForRequestedType<IMenuItem>()
-            //    .TheDefaultIsConcreteType<FooMenuItem>();
-
-
-
-            return registry;
         }
 
         protected override object CreateRootModel()

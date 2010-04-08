@@ -4,6 +4,25 @@
     <StackPanel>
         <TextBlock Text="{Binding DisplayName}"
                    FontSize="25" />
-        <TextBox></TextBox>
+
+        <ItemsControl ItemsSource="{Binding Recipes}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0 5"
+                            Padding="5"
+                            CornerRadius="5"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}"
+                                       FontSize="16" />
+                            <TextBlock Text="{Binding Description}"
+                                       TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
     </StackPanel>
 </UserControl>

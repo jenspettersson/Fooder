@@ -1,27 +1,28 @@
+using Caliburn.PresentationFramework;
 using Caliburn.PresentationFramework.ApplicationModel;
+using Fooder.Client.Model;
 using Fooder.Client.ViewModels.Interfaces;
 
 namespace Fooder.Client.ViewModels
 {
     public class HomeViewModel : Presenter, IHomeViewModel
     {
-        private readonly IShellViewModel _shellViewModel;
+        private readonly IRecipeModel recipeModel;
 
-        public HomeViewModel(IShellViewModel shellViewModel)
+        public IObservableCollection<Recipe> Recipes { get; private set; }
+
+        public HomeViewModel(IRecipeModel recipeModel)
         {
-            _shellViewModel = shellViewModel;
+            this.recipeModel = recipeModel;
+
+            Recipes = new BindableCollection<Recipe>(recipeModel.GetAllRecipes());
         }
 
         protected override void OnInitialize()
         {
             base.OnInitialize();
 
-            DisplayName = "Home";
-        }
-
-        public void GoToTest()
-        {
-            
+            DisplayName = "Latest recipes";
         }
     }
 }
